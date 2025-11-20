@@ -1,20 +1,45 @@
-# Regex in Python: Filter Words Without the Letter 'e'
+# Exp.No:3b  
+## REGEX - PATTERN MATCHING USING REGEX
 
-## 🎯 Aim
-To write a Python program that filters out and returns all elements from a list **that do not contain the letter `'e'`**, using **regular expressions (regex)**.
+---
 
-## 🧠 Algorithm
-1. Import the `re` module.
-2. Initialize an empty list `l1` to store results.
-3. Define a list of words:  
-   `items = ['goal', 'new', 'user', 'sit', 'eat', 'dinner']`
-4. Iterate through each word in the list:
-   - Use `re.search(r"e", i)` to check if the word contains `'e'`.
-   - If **not**, append the word to `l1`.
-5. Print the final filtered list.
+### AIM  
+To write a Python program that matches a string containing an `'a'` followed by **two to three `'b'` characters** using regular expressions.
 
-## 🧾 Program
-Add code here
-## Output
+---
 
-## Result
+### ALGORITHM
+
+1. Begin the program.  
+2. Accept a string `str1` from the user.  
+3. Define the regular expression pattern as `r"[a]+b{2,3}"`.  
+4. Use the `re.match()` function to check if the string `str1` matches the pattern.  
+5. If a match is found, print `"Found a match!"`.  
+6. If no match is found, print `"Not matched!"`.  
+7. Terminate the program.
+
+---
+
+### PROGRAM
+
+```
+reg no:212223070004
+name:dhushanth.km
+import re
+
+pattern = r'ab{2,3}'
+test_strings = ["ab", "abb", "abbb", "abbbb", "a", "b", "aabbb"]
+
+for s in test_strings:
+    if re.fullmatch(pattern, s):
+        print(f"Matched: {s}")
+    else:
+        print(f"Not matched: {s}")
+
+```
+### OUTPUT
+![image](https://github.com/user-attachments/assets/be3778c6-2472-40df-8588-c800b2ce4077)
+
+### RESULT
+Thus the above program is executed successfully.
+
